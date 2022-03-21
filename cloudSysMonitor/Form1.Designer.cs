@@ -89,6 +89,8 @@
             this.cpu = new System.Windows.Forms.Label();
             this.motherboard = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.ramUsageInUse = new System.Windows.Forms.Label();
+            this.ramUsageInUseInfo = new System.Windows.Forms.Label();
             this.diskDriveUsageTransfer = new System.Windows.Forms.Label();
             this.diskDriveUsageTransferInfo = new System.Windows.Forms.Label();
             this.cpuUsageProcesses = new System.Windows.Forms.Label();
@@ -101,8 +103,8 @@
             this.ramUsageCachedInfo = new System.Windows.Forms.Label();
             this.ramUsageCommitted = new System.Windows.Forms.Label();
             this.ramUsageCommittedInfo = new System.Windows.Forms.Label();
-            this.diskDriveUsageInUse = new System.Windows.Forms.Label();
-            this.diskDriveUsageInUseInfo = new System.Windows.Forms.Label();
+            this.diskDriveUsageActive = new System.Windows.Forms.Label();
+            this.diskDriveUsageActiveInfo = new System.Windows.Forms.Label();
             this.diskDriveUsageWrite = new System.Windows.Forms.Label();
             this.diskDriveUsageWriteInfo = new System.Windows.Forms.Label();
             this.diskDriveUsageRead = new System.Windows.Forms.Label();
@@ -780,6 +782,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.ramUsageInUse);
+            this.tabPage2.Controls.Add(this.ramUsageInUseInfo);
             this.tabPage2.Controls.Add(this.diskDriveUsageTransfer);
             this.tabPage2.Controls.Add(this.diskDriveUsageTransferInfo);
             this.tabPage2.Controls.Add(this.cpuUsageProcesses);
@@ -792,8 +796,8 @@
             this.tabPage2.Controls.Add(this.ramUsageCachedInfo);
             this.tabPage2.Controls.Add(this.ramUsageCommitted);
             this.tabPage2.Controls.Add(this.ramUsageCommittedInfo);
-            this.tabPage2.Controls.Add(this.diskDriveUsageInUse);
-            this.tabPage2.Controls.Add(this.diskDriveUsageInUseInfo);
+            this.tabPage2.Controls.Add(this.diskDriveUsageActive);
+            this.tabPage2.Controls.Add(this.diskDriveUsageActiveInfo);
             this.tabPage2.Controls.Add(this.diskDriveUsageWrite);
             this.tabPage2.Controls.Add(this.diskDriveUsageWriteInfo);
             this.tabPage2.Controls.Add(this.diskDriveUsageRead);
@@ -813,11 +817,33 @@
             this.tabPage2.Text = "Performance";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // ramUsageInUse
+            // 
+            this.ramUsageInUse.AutoSize = true;
+            this.ramUsageInUse.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ramUsageInUse.Location = new System.Drawing.Point(587, 140);
+            this.ramUsageInUse.Name = "ramUsageInUse";
+            this.ramUsageInUse.Size = new System.Drawing.Size(51, 20);
+            this.ramUsageInUse.TabIndex = 35;
+            this.ramUsageInUse.Text = "In Use:";
+            this.ramUsageInUse.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ramUsageInUseInfo
+            // 
+            this.ramUsageInUseInfo.AutoSize = true;
+            this.ramUsageInUseInfo.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ramUsageInUseInfo.Location = new System.Drawing.Point(644, 140);
+            this.ramUsageInUseInfo.Name = "ramUsageInUseInfo";
+            this.ramUsageInUseInfo.Size = new System.Drawing.Size(16, 20);
+            this.ramUsageInUseInfo.TabIndex = 34;
+            this.ramUsageInUseInfo.Text = "0";
+            this.ramUsageInUseInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // diskDriveUsageTransfer
             // 
             this.diskDriveUsageTransfer.AutoSize = true;
             this.diskDriveUsageTransfer.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.diskDriveUsageTransfer.Location = new System.Drawing.Point(112, 239);
+            this.diskDriveUsageTransfer.Location = new System.Drawing.Point(83, 239);
             this.diskDriveUsageTransfer.Name = "diskDriveUsageTransfer";
             this.diskDriveUsageTransfer.Size = new System.Drawing.Size(91, 20);
             this.diskDriveUsageTransfer.TabIndex = 33;
@@ -828,7 +854,7 @@
             // 
             this.diskDriveUsageTransferInfo.AutoSize = true;
             this.diskDriveUsageTransferInfo.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.diskDriveUsageTransferInfo.Location = new System.Drawing.Point(209, 239);
+            this.diskDriveUsageTransferInfo.Location = new System.Drawing.Point(180, 239);
             this.diskDriveUsageTransferInfo.Name = "diskDriveUsageTransferInfo";
             this.diskDriveUsageTransferInfo.Size = new System.Drawing.Size(16, 20);
             this.diskDriveUsageTransferInfo.TabIndex = 32;
@@ -905,7 +931,7 @@
             // 
             this.ramUsageCached.AutoSize = true;
             this.ramUsageCached.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ramUsageCached.Location = new System.Drawing.Point(569, 206);
+            this.ramUsageCached.Location = new System.Drawing.Point(587, 239);
             this.ramUsageCached.Name = "ramUsageCached";
             this.ramUsageCached.Size = new System.Drawing.Size(59, 20);
             this.ramUsageCached.TabIndex = 25;
@@ -916,7 +942,7 @@
             // 
             this.ramUsageCachedInfo.AutoSize = true;
             this.ramUsageCachedInfo.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ramUsageCachedInfo.Location = new System.Drawing.Point(634, 206);
+            this.ramUsageCachedInfo.Location = new System.Drawing.Point(652, 239);
             this.ramUsageCachedInfo.Name = "ramUsageCachedInfo";
             this.ramUsageCachedInfo.Size = new System.Drawing.Size(16, 20);
             this.ramUsageCachedInfo.TabIndex = 24;
@@ -927,7 +953,7 @@
             // 
             this.ramUsageCommitted.AutoSize = true;
             this.ramUsageCommitted.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ramUsageCommitted.Location = new System.Drawing.Point(569, 140);
+            this.ramUsageCommitted.Location = new System.Drawing.Point(587, 206);
             this.ramUsageCommitted.Name = "ramUsageCommitted";
             this.ramUsageCommitted.Size = new System.Drawing.Size(77, 20);
             this.ramUsageCommitted.TabIndex = 23;
@@ -938,40 +964,40 @@
             // 
             this.ramUsageCommittedInfo.AutoSize = true;
             this.ramUsageCommittedInfo.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ramUsageCommittedInfo.Location = new System.Drawing.Point(652, 140);
+            this.ramUsageCommittedInfo.Location = new System.Drawing.Point(670, 206);
             this.ramUsageCommittedInfo.Name = "ramUsageCommittedInfo";
             this.ramUsageCommittedInfo.Size = new System.Drawing.Size(16, 20);
             this.ramUsageCommittedInfo.TabIndex = 22;
             this.ramUsageCommittedInfo.Text = "0";
             this.ramUsageCommittedInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // diskDriveUsageInUse
+            // diskDriveUsageActive
             // 
-            this.diskDriveUsageInUse.AutoSize = true;
-            this.diskDriveUsageInUse.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.diskDriveUsageInUse.Location = new System.Drawing.Point(112, 140);
-            this.diskDriveUsageInUse.Name = "diskDriveUsageInUse";
-            this.diskDriveUsageInUse.Size = new System.Drawing.Size(51, 20);
-            this.diskDriveUsageInUse.TabIndex = 14;
-            this.diskDriveUsageInUse.Text = "In Use:";
-            this.diskDriveUsageInUse.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.diskDriveUsageActive.AutoSize = true;
+            this.diskDriveUsageActive.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.diskDriveUsageActive.Location = new System.Drawing.Point(83, 140);
+            this.diskDriveUsageActive.Name = "diskDriveUsageActive";
+            this.diskDriveUsageActive.Size = new System.Drawing.Size(50, 20);
+            this.diskDriveUsageActive.TabIndex = 14;
+            this.diskDriveUsageActive.Text = "Active:";
+            this.diskDriveUsageActive.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // diskDriveUsageInUseInfo
+            // diskDriveUsageActiveInfo
             // 
-            this.diskDriveUsageInUseInfo.AutoSize = true;
-            this.diskDriveUsageInUseInfo.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.diskDriveUsageInUseInfo.Location = new System.Drawing.Point(169, 140);
-            this.diskDriveUsageInUseInfo.Name = "diskDriveUsageInUseInfo";
-            this.diskDriveUsageInUseInfo.Size = new System.Drawing.Size(16, 20);
-            this.diskDriveUsageInUseInfo.TabIndex = 13;
-            this.diskDriveUsageInUseInfo.Text = "0";
-            this.diskDriveUsageInUseInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.diskDriveUsageActiveInfo.AutoSize = true;
+            this.diskDriveUsageActiveInfo.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.diskDriveUsageActiveInfo.Location = new System.Drawing.Point(140, 140);
+            this.diskDriveUsageActiveInfo.Name = "diskDriveUsageActiveInfo";
+            this.diskDriveUsageActiveInfo.Size = new System.Drawing.Size(16, 20);
+            this.diskDriveUsageActiveInfo.TabIndex = 13;
+            this.diskDriveUsageActiveInfo.Text = "0";
+            this.diskDriveUsageActiveInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // diskDriveUsageWrite
             // 
             this.diskDriveUsageWrite.AutoSize = true;
             this.diskDriveUsageWrite.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.diskDriveUsageWrite.Location = new System.Drawing.Point(112, 206);
+            this.diskDriveUsageWrite.Location = new System.Drawing.Point(83, 206);
             this.diskDriveUsageWrite.Name = "diskDriveUsageWrite";
             this.diskDriveUsageWrite.Size = new System.Drawing.Size(88, 20);
             this.diskDriveUsageWrite.TabIndex = 12;
@@ -982,7 +1008,7 @@
             // 
             this.diskDriveUsageWriteInfo.AutoSize = true;
             this.diskDriveUsageWriteInfo.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.diskDriveUsageWriteInfo.Location = new System.Drawing.Point(206, 206);
+            this.diskDriveUsageWriteInfo.Location = new System.Drawing.Point(177, 206);
             this.diskDriveUsageWriteInfo.Name = "diskDriveUsageWriteInfo";
             this.diskDriveUsageWriteInfo.Size = new System.Drawing.Size(16, 20);
             this.diskDriveUsageWriteInfo.TabIndex = 11;
@@ -993,7 +1019,7 @@
             // 
             this.diskDriveUsageRead.AutoSize = true;
             this.diskDriveUsageRead.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.diskDriveUsageRead.Location = new System.Drawing.Point(112, 173);
+            this.diskDriveUsageRead.Location = new System.Drawing.Point(83, 173);
             this.diskDriveUsageRead.Name = "diskDriveUsageRead";
             this.diskDriveUsageRead.Size = new System.Drawing.Size(90, 20);
             this.diskDriveUsageRead.TabIndex = 10;
@@ -1004,7 +1030,7 @@
             // 
             this.ramUsageAvailable.AutoSize = true;
             this.ramUsageAvailable.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ramUsageAvailable.Location = new System.Drawing.Point(569, 173);
+            this.ramUsageAvailable.Location = new System.Drawing.Point(587, 173);
             this.ramUsageAvailable.Name = "ramUsageAvailable";
             this.ramUsageAvailable.Size = new System.Drawing.Size(68, 20);
             this.ramUsageAvailable.TabIndex = 8;
@@ -1026,7 +1052,7 @@
             // 
             this.diskDriveUsageReadInfo.AutoSize = true;
             this.diskDriveUsageReadInfo.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.diskDriveUsageReadInfo.Location = new System.Drawing.Point(208, 173);
+            this.diskDriveUsageReadInfo.Location = new System.Drawing.Point(179, 173);
             this.diskDriveUsageReadInfo.Name = "diskDriveUsageReadInfo";
             this.diskDriveUsageReadInfo.Size = new System.Drawing.Size(16, 20);
             this.diskDriveUsageReadInfo.TabIndex = 6;
@@ -1037,7 +1063,7 @@
             // 
             this.ramUsageAvailableInfo.AutoSize = true;
             this.ramUsageAvailableInfo.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ramUsageAvailableInfo.Location = new System.Drawing.Point(643, 173);
+            this.ramUsageAvailableInfo.Location = new System.Drawing.Point(661, 173);
             this.ramUsageAvailableInfo.Name = "ramUsageAvailableInfo";
             this.ramUsageAvailableInfo.Size = new System.Drawing.Size(16, 20);
             this.ramUsageAvailableInfo.TabIndex = 5;
@@ -1059,7 +1085,7 @@
             // 
             this.diskDriveUsage.AutoSize = true;
             this.diskDriveUsage.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.diskDriveUsage.Location = new System.Drawing.Point(72, 99);
+            this.diskDriveUsage.Location = new System.Drawing.Point(43, 99);
             this.diskDriveUsage.Name = "diskDriveUsage";
             this.diskDriveUsage.Size = new System.Drawing.Size(113, 20);
             this.diskDriveUsage.TabIndex = 2;
@@ -1070,7 +1096,7 @@
             // 
             this.ramUsage.AutoSize = true;
             this.ramUsage.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ramUsage.Location = new System.Drawing.Point(536, 99);
+            this.ramUsage.Location = new System.Drawing.Point(557, 99);
             this.ramUsage.Name = "ramUsage";
             this.ramUsage.Size = new System.Drawing.Size(81, 20);
             this.ramUsage.TabIndex = 1;
@@ -1197,8 +1223,8 @@
         private Label diskDriveUsageRead;
         private Label diskDriveUsageWrite;
         private Label diskDriveUsageWriteInfo;
-        private Label diskDriveUsageInUse;
-        private Label diskDriveUsageInUseInfo;
+        private Label diskDriveUsageActive;
+        private Label diskDriveUsageActiveInfo;
         private Label ramUsageCommitted;
         private Label ramUsageCommittedInfo;
         private Label ramUsageCached;
@@ -1211,5 +1237,7 @@
         private Label cpuUsageProcessesInfo;
         private Label diskDriveUsageTransfer;
         private Label diskDriveUsageTransferInfo;
+        private Label ramUsageInUse;
+        private Label ramUsageInUseInfo;
     }
 }

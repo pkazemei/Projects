@@ -44,10 +44,11 @@ namespace sysInfo
         public PerformanceCounter cpuHandles1Counter = new PerformanceCounter("Terminal Services Session", "Handle Count", "Console");
         public PerformanceCounter cpuHandles2Counter = new PerformanceCounter("Terminal Services Session", "Handle Count", "Services");
 
-        public PerformanceCounter ramCommittedCounter = new PerformanceCounter("Memory", "% Committed Bytes In Use");
+        public PerformanceCounter ramTotalCounter = new PerformanceCounter("NUMA Node Memory", "Total MBytes", "_Total");
         public PerformanceCounter ramAvailableCounter = new PerformanceCounter("Memory", "Available MBytes");
+        public PerformanceCounter ramCommittedCounter = new PerformanceCounter("Memory", "% Committed Bytes In Use");
         public PerformanceCounter ramCachedCounter = new PerformanceCounter("Memory", "Cache Bytes");
-        
+
         public void GetInfo()
         {
             hardwareInfo.RefreshMotherboardList();
@@ -88,7 +89,7 @@ namespace sysInfo
         {
             while (true)
             {
-                diskDriveUsageInUseInfo.Text = Math.Round(diskDriveInUseCounter.NextValue(), 2).ToString() + " %";
+                diskDriveUsageActiveInfo.Text = Math.Round(diskDriveInUseCounter.NextValue(), 2).ToString() + " %";
                 diskDriveUsageReadInfo.Text = ConvertBToKB(diskDriveReadCounter.NextValue())+ " KB/s";
                 diskDriveUsageWriteInfo.Text = ConvertBToKB(diskDriveWriteCounter.NextValue()) + " KB/s";
                 diskDriveUsageTransferInfo.Text = Math.Round(diskDriveTransferCounter.NextValue()) + " /s";
@@ -100,8 +101,9 @@ namespace sysInfo
                 double cpuHandles = cpuHandles1Counter.NextValue() + cpuHandles2Counter.NextValue();
                 cpuUsageHandlesInfo.Text = cpuHandles.ToString();
 
-                ramUsageCommittedInfo.Text = Math.Round(ramCommittedCounter.NextValue(), 2).ToString() + " %";
+                ramUsageInUseInfo.Text = ConvertBToKB(ramTotalCounter.NextValue() - ramAvailableCounter.NextValue()) + " GB";
                 ramUsageAvailableInfo.Text = ConvertBToKB(ramAvailableCounter.NextValue()).ToString() + " GB";
+                ramUsageCommittedInfo.Text = Math.Round(ramCommittedCounter.NextValue(), 2).ToString() + " %";
                 ramUsageCachedInfo.Text = ConvertBToGB(ramCachedCounter.NextValue());
 
                 await Task.Delay(1000);
@@ -165,14 +167,14 @@ namespace sysInfo
             ramManuInfo.Text = hardwareInfo.MemoryList[0].Manufacturer;
             ramPartNumberInfo.Text = hardwareInfo.MemoryList[0].PartNumber;
             ramSpeedInfo.Text = hardwareInfo.MemoryList[0].Speed.ToString() + "MHz";
-            //convert ram capacity B to GB
-            decimal singleRamGB = 0;
-            decimal totalRamGB = 0;
+            //convert ram capacity B to GB and get total
+            float singleRamGB = 0;
+            float totalRamGB = 0;
             foreach (Memory x in hardwareInfo.MemoryList)
             {
-                singleRamGB = x.Capacity / (1024.0m * 1024.0m * 1024.0m);
+                singleRamGB = x.Capacity / (1024 * 1024 * 1024);
                 Math.Round(singleRamGB, 2);
-                totalRamGB += x.Capacity / (1024.0m * 1024.0m * 1024.0m);
+                totalRamGB += x.Capacity / (1024 * 1024 * 1024);
                 Math.Round(totalRamGB, 2);
             }
             ramCapacityInfo.Text = hardwareInfo.MemoryList.Count.ToString() + " x " + singleRamGB.ToString() + "GB = " + totalRamGB.ToString() +"GB";
@@ -186,7 +188,7 @@ namespace sysInfo
         private void about_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             string message = 
-                "Cloud System Monitor v1.00\n\n" +
+                "Cloud System Monitor v1.01\n\n" +
                 "Developed by Paymon Kazemeini\n\n" +
                 "Contact: pkazemei@gmail.com\n\n" +
                 "For more projects, go to www.github.com/pkazemei";
