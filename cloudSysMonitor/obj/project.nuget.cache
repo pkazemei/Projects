@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "dgSpecHash": "7UYQt13HNtoT1gFkqCbDBdxvftObQuOtvT4L6AC0E4Y/aCLapYFgb+YyIixpSpMGRmnmhrEpXFUsrN4ndI0mHw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\pkaze\\Desktop\\VS Projects\\Projects\\cloudSysMonitor\\cloudSysMonitor.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\pkaze\\.nuget\\packages\\hardware.info\\10.0.0\\hardware.info.10.0.0.nupkg.sha512",
+    "C:\\Users\\pkaze\\.nuget\\packages\\system.codedom\\6.0.0\\system.codedom.6.0.0.nupkg.sha512",
+    "C:\\Users\\pkaze\\.nuget\\packages\\system.management\\6.0.0\\system.management.6.0.0.nupkg.sha512",
+    "C:\\Users\\pkaze\\.nuget\\packages\\systemperformance\\1.0.0.6\\systemperformance.1.0.0.6.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'SystemPerformance 1.0.0.6' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "SystemPerformance",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    }
+  ]
+}
