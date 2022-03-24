@@ -14,10 +14,8 @@ Recent Updates
 V2.0.12 - Stable (latest release) - made corrections to UI
 About section was fixed. The debug and release sections were fixed as well.
 
-V2.01 release - Minor changes
-Official release version. Project was built as .exe executable file. Located in cloudSysMonitor\bin\Release\net6.0-windows. Keep in mind the files inside the folder are required to run the executable.
+V2.01 release - Minor changes - Official release version. Project was built as .exe executable file. Located in cloudSysMonitor\bin\Release\net6.0-windows. Keep in mind the files inside the folder are required to run the executable.
 
-V2.0 debug - Major changes
-Included Azure IoT functionality. Simply replace the device connection string with your own and run. Reduced file size and removed unnecessary code.
+V2.0 debug - Major changes - Included Azure IoT functionality. Simply replace the device connection string with your own and run. Reduced file size and removed unnecessary code.
 
 V1.0 Initial Commit - Captured hardware info with "Get Info" and performance metrics with "Get Performance".
