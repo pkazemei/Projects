@@ -44,6 +44,14 @@
               "target": "Package",
               "version": "[10.0.0, )"
             },
+            "Microsoft.Azure.Devices.Client": {
+              "target": "Package",
+              "version": "[1.40.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
             "System.Management": {
               "target": "Package",
               "version": "[6.0.0, )"

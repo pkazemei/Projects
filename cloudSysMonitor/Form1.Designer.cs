@@ -931,7 +931,7 @@
             // 
             this.ramUsageCached.AutoSize = true;
             this.ramUsageCached.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ramUsageCached.Location = new System.Drawing.Point(587, 239);
+            this.ramUsageCached.Location = new System.Drawing.Point(587, 206);
             this.ramUsageCached.Name = "ramUsageCached";
             this.ramUsageCached.Size = new System.Drawing.Size(59, 20);
             this.ramUsageCached.TabIndex = 25;
@@ -942,7 +942,7 @@
             // 
             this.ramUsageCachedInfo.AutoSize = true;
             this.ramUsageCachedInfo.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ramUsageCachedInfo.Location = new System.Drawing.Point(652, 239);
+            this.ramUsageCachedInfo.Location = new System.Drawing.Point(652, 206);
             this.ramUsageCachedInfo.Name = "ramUsageCachedInfo";
             this.ramUsageCachedInfo.Size = new System.Drawing.Size(16, 20);
             this.ramUsageCachedInfo.TabIndex = 24;
@@ -953,7 +953,7 @@
             // 
             this.ramUsageCommitted.AutoSize = true;
             this.ramUsageCommitted.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ramUsageCommitted.Location = new System.Drawing.Point(587, 206);
+            this.ramUsageCommitted.Location = new System.Drawing.Point(587, 239);
             this.ramUsageCommitted.Name = "ramUsageCommitted";
             this.ramUsageCommitted.Size = new System.Drawing.Size(77, 20);
             this.ramUsageCommitted.TabIndex = 23;
@@ -964,7 +964,7 @@
             // 
             this.ramUsageCommittedInfo.AutoSize = true;
             this.ramUsageCommittedInfo.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ramUsageCommittedInfo.Location = new System.Drawing.Point(670, 206);
+            this.ramUsageCommittedInfo.Location = new System.Drawing.Point(670, 239);
             this.ramUsageCommittedInfo.Name = "ramUsageCommittedInfo";
             this.ramUsageCommittedInfo.Size = new System.Drawing.Size(16, 20);
             this.ramUsageCommittedInfo.TabIndex = 22;
