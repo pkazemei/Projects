@@ -238,7 +238,7 @@ namespace sysInfo
         private void about_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             string message = 
-                "Cloud System Monitor v2.0\n\n" +
+                "Cloud System Monitor v2.01\n\n" +
                 "Developed by Paymon Kazemeini\n\n" +
                 "Contact: pkazemei@gmail.com\n\n" +
                 "For more projects, go to www.github.com/pkazemei";
