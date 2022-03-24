@@ -21,4 +21,5 @@ V2.0 debug - Major changes
 Included Azure IoT functionality. Simply replace the device connection string with your own and run. Reduced file size and removed unnecessary code.
 
 V1.0 Initial Commit
+
 Captured hardware info with "Get Info" and performance metrics with "Get Performance".
