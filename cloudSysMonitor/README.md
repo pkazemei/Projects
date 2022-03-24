@@ -1,4 +1,4 @@
-This app is used to capture system hardware info and track its usage by sending telemtry to Azure IoT for analysis.
+This app is used to capture system hardware info and track its usage by sending telemetry to Azure IoT for analysis.
 This data comes from Performance Counters using Windows Management Instrumentation and can be compared to the Windows Task Manager to ensure its readings are accurate.
 
 Use "Get Info" to get information on current hardware installed on the computer.
