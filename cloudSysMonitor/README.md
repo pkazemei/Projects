@@ -11,7 +11,7 @@ If you want the app to work with your own device, simply replace the device conn
 
 Recent Updates
 
-V 2.0.12 - Stable (latest release) - made corrections to UI
+V2.0.12 - Stable (latest release) - made corrections to UI
 About section was fixed. The debug and release sections were fixed as well.
 
 V2.01 release - Minor changes
