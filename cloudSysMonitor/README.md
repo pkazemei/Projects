@@ -1,3 +1,5 @@
+Cloud System Monitor
+
 This app is used to capture system hardware info and track its usage by sending telemetry to Azure IoT for analysis.
 This data comes from Performance Counters using Windows Management Instrumentation and can be compared to the Windows Task Manager to ensure its readings are accurate.
 
