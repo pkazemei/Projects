@@ -15,7 +15,7 @@ If you want the app to work with your own device, simply replace the device conn
 
 Recent Updates
 
-V2.012 - Stable (latest release) - made corrections to UI. About section was fixed. The debug and release sections were fixed as well. Included screenshots of the UI and of messages sent and received.
+V2.012 - Stable (latest release) - Made corrections to UI. The about, debug, and release sections were fixed. Included screenshots of the UI and of messages sent and received.
 
 V2.01 release - Minor changes - Official release version. Project was built as .exe executable file. Located in cloudSysMonitor\bin\Release\net6.0-windows. Keep in mind the files inside the folder are required to run the executable.
 
