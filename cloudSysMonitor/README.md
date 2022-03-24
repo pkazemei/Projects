@@ -7,7 +7,7 @@ Use "Get Info" to get information on current hardware installed on the computer.
 Use "Get Performance to get performance metrics on disk drive, CPU, and RAM usage.
 
 Telemetry is sent once "Get Performance" button is clicked. You can view the details of each message on the console, updated every 5 seconds.
-You can view telemetry received using Azure IoT Explorer and navigating towards the desired device connected within IoT Hub. Select "Telemetry" to receive events.
+You can view telemetry received using Azure IoT Explorer and navigating towards the desired device connected within IoT Hub.
 
 If you want the app to work with your own device, simply replace the device connection string with your own and run the app. 
 
