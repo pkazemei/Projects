@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "azure-iot-device-mqtt": "^1.15.8"
+  }
+}
