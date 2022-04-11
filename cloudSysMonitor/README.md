@@ -5,7 +5,6 @@ This data comes from Performance Counters using Windows Management Instrumentati
 
 Use "Get Info" to get information on current hardware installed on the computer.
 Use "Get Performance to get performance metrics on disk drive, CPU, and RAM usage.
-
 A complete summary of hardware details appear in the console, once "Get Info" button is clicked, which provide even more info beyond the scope of the app.
 
 Telemetry is sent once "Get Performance" button is clicked. You can view the details of each message sent from the console, updated every 5 seconds.
